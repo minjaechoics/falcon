@@ -9,6 +9,10 @@ on:
     branches:
       - main
 
+# 👇 [중요] 이 부분이 없어서 403 에러가 났던 것입니다.
+permissions:
+  contents: write
+
 jobs:
   update-data:
     runs-on: ubuntu-latest
