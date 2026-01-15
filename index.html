@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI/Data Competition Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏆 AI & Data Competition Dashboard</h1>
+            <p class="subtitle">실시간 경진대회 모니터링</p>
+            <div class="header-stats">
+                <div class="stat-card">
+                    <span class="stat-number" id="totalCompetitions">-</span>
+                    <span class="stat-label">총 대회 수</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="lastUpdated">-</span>
+                    <span class="stat-label">최종 업데이트</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="대회명 검색...">
+            </div>
+            <div class="filter-group">
+                <select id="platformFilter">
+                    <option value="">모든 플랫폼</option>
+                    <option value="Kaggle">Kaggle</option>
+                    <option value="Dacon">Dacon</option>
+                    <option value="Devpost">Devpost</option>
+                    <option value="AIcrowd">AIcrowd</option>
+                    <option value="Analytics Vidhya">Analytics Vidhya</option>
+                    <option value="DrivenData">DrivenData</option>
+                </select>
+                <select id="sortFilter">
+                    <option value="deadline">마감일 순</option>
+                    <option value="daysLeft">남은 기간 순</option>
+                    <option value="platform">플랫폼 순</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>대회 정보를 불러오는 중...</p>
+        </div>
+
+        <div id="competitions" class="competitions-grid"></div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+            <p>검색 결과가 없습니다.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with ❤️ | Data updated daily via GitHub Actions</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
