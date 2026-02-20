@@ -1,7 +1,19 @@
 {
-  "lastUpdated": "2026-02-20T04:29:33.085Z",
-  "totalCompetitions": 1,
+  "lastUpdated": "2026-02-20T05:39:30.764Z",
+  "totalCompetitions": 2,
   "competitions": [
+    {
+      "platform": "Dacon",
+      "title": "더보기",
+      "url": "https://dacon.io/competitions/official",
+      "description": "",
+      "tags": [
+        "Korea",
+        "Data Science"
+      ],
+      "deadline": null,
+      "daysLeft": 0
+    },
     {
       "platform": "Dacon",
       "title": "구글 로그인",
